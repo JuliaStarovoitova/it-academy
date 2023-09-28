@@ -6,62 +6,102 @@
     <title>Document</title>
 </head>
 <style>
-           
+    html,body{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 5px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .column1{
+        float: left;
+        width: 165px;
+    }
+    .column2{
+        margin-left: 165px;
+    }
+    .column2 input[type="text"]{
+        width: 100%;
+    }
+    select{
+        width: 300px;
+    }
+    div.indent{
+        margin: 5px 0;
+    }
     @media(max-width:350px){
-        label{
-        display: block;
-        margin-left: -5px;
+      
+        .column1{
+            display: block;
+            width: 100%;  
         }
-        span{
-        display: block;
-        }
-        .title{
+        .column2{
+            margin-left: 0;
             width: 100%; 
         }
-        .category{
-            width: 100%;    
-        }          
+        select{
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .column2 label{
+            display: block;
+            margin-left: -5px;
+        }  
     }
-    @media(min-width:410px){
-        .category{
-            margin-left: 106px;
-            width: 200px;
-        }
-        .title{
-            margin-left: 50px;
-        }
-        .public{
-            margin-left: 77px;  
-        }
-    }
-
 </style>
-
 <body>
-
-    
 <form>
-    <div style="border-width: 100%; margin: 10px;">
-   <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
-   <span>Название статьи:</span>
-        <input type="text" name="title" class="title" ><br>
-    <span>Рубрика:</span>
-        <select name="category" class="category" >
+    <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+    <div class="indent">
+    <div class="column1">
+        <label for="title">Название статьи:</label></div>
+    <div class="column2">
+            <input type="text" id="title">
+    </div>
+    </div>
+    <div class="indent">
+    <div class="column1">
+        <label for="category">Рубрика:</label></div>
+    <div class="column2">
+        <select name="category" id="category">
             <option>Программирование</option>
             <option>Тестирование</option>
-        </select><br>
-    
-    <span>Публикация:</span>
-        <label><input type="radio" name="public" value="1" class="public">на сайте</label>
-        <label><input type="radio" name="public"  value="2">в журнале</label>
-       <label><input type="radio" name="public"  value="3">на сайте и в журнале</label><br>
-    <span>Разрешить коментарий:
-        <input type="checkbox" name="checkbox"  value="yes"></span><br>
-    <span>Текст статьи:</span>
-        <textarea name="text" style="width: 100%;"></textarea><br>
-        <input type="submit" value="Опубликовать">
+        </select>
+    </div>
+    </div>
+    <div class="indent">
+    <div class="column1">
+        <label for="public">Публикация:</label>
     </div>
     
+    <div class="column2">
+        <label><input type="radio" name="public" value="1" checked>на сайте</label>
+        <label><input type="radio" name="public"  value="2" checked>в журнале</label>
+        <label><input type="radio" name="public"  value="3" checked>на сайте и в журнале</label>
+    </div>
+    </div>
+    <div class="indent">
+        <div class="chec">
+        <div class="column1">
+            <label for="approval">Разрешить коментарий:</label>
+        </div>
+        <div class="column2">
+            <input type="checkbox" name="checkbox"  value="yes">
+        </div>
+    </div>
+    </div>
+    <div class="indent">
+         <label for="text">Текст статьи:</label>
+        <textarea name="text" style="width: 100%;"></textarea>   
+    </div>
+    <div class="indent">
+        <div class="column1">
+            <input type="submit" value="Опубликовать" checked>
+        </div>
+    </div>
 </form>
 </body>
 </html>
