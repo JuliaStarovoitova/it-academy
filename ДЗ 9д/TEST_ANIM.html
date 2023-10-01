@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+        background-color: orange;
+}
+p{
+    font-style: italic;
+}
+@keyframes MyAnimation1{
+    from { background-color: rgb(74, 233, 233); color: rgb(62, 52, 199) }
+    50% { background-color: rgb(240, 157, 240); color: red }
+    to { background-color: rgb(49, 134, 134); color: blue }
+}
+@keyframes MyAnimation2{
+    from { background-color: rgb(229, 255, 0); color: green }
+    60% { background-color: rgb(35, 230, 165); color: rgb(248, 131, 21) }
+    to { background-color: rgb(255, 0, 212); color: yellow }
+}
+@keyframes MyAnimation3{
+    from { background: url('baby.jpg') -30px 0; }
+    to { background: url('baby.jpg') 8000px 0; }
+}
+.ex1{
+    margin-bottom: -40px;
+    clip-path: ellipse(400px 80px at 10% 50%);
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    animation: MyAnimation1 5s infinite;
+}
+.ex2{
+    margin-bottom: -40px;
+    clip-path: ellipse(400px 80px at 90% 50%);
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    animation: MyAnimation2 3s infinite;
+}
+.ex3{
+    border: solid green 5px;
+    border-radius: 150px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 160px;
+    height: 400px;
+    animation: MyAnimation3 1s steps(9) infinite;
+}
+.ex3:hover{
+    border:solid blue 10px;
+}
+@media(max-width:800px){
+    .ex3{
+    position: relative;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    }
+}
+.ex4{
+    background-color: rgb(119, 233, 138);
+    color: rgb(245, 168, 24);
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.ex4:hover{
+    background-color: green;
+    color: red;
+}
+</style>
+<body>
+
+    <div class="ex1">
+<p >Топ топ топает малыш<br>
+С мамой по дорожке милый стриж<br>
+Маленькие ножки не спешат<br>
+Только знай себе твердят</p></div>
+
+<div class="ex2">
+    <p>Топ топ очень нелегки<br>
+В неизвестность первые шаги<br>
+А в саду дорожка так длинна<br>
+Прямо к небу тянется она <br>
+Топ топ топ топ очень <br>
+Топ топ топ топ пеpвые шаги</p></div>
+
+<div class="ex1">
+<p>Топ топ скоpо подрастешь<br>
+Hожками своими ты пойдёшь<br>
+И сумеешь может быть пешком<br>
+Землю обойти кругом</p></div>
+
+<div class="ex2">
+<p>Топ топ время не теряй<br>
+До скамьи без мамы дошагай<br>
+Обойди прохожий стороной<br>
+Видишь человек идёт большой<br>
+Топ топ топ топ очень нелегки<br>
+Топ топ топ топ пеpвые шаги</p></div> 
+
+<div class="ex1">
+<p>Топ топ скоро подрастешь<br>
+Hожками своими ты пойдёшь<br>
+Будет нелегко малыш подчас<br>
+Hачинать всё в жизни в первый раз<br>
+Топ топ топ топ очень нелегки<br>
+Топ топ топ топ пеpвые шаги</p></div>
+</div> 
+<div class="ex3"></div>
+<div class="ex4">
+<a href="https://nukadeti.ru/pesni/top-top-topaet-malysh"><b>>>> Послушать песню! <<<</b></a></div>
+</body>
+</html>
