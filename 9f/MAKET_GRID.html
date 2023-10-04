@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 60px;
+        }
+        .header{
+            grid-column: 1/3;
+            grid-row: 1;
+            text-align: center;
+            text-transform: uppercase; 
+            padding: 10px;
+            background-color:  rgb(61, 188, 226); 
+            color: blue; 
+            font-size: 2rem;
+        }
+        .bottom{
+            grid-column: 1/3;
+            grid-row: 3;
+            text-align: center;
+            text-transform: uppercase; 
+            padding: 10px;
+            background-color:  rgb(61, 188, 226); 
+            color: blue; 
+            font-size: 2rem;
+        }
+        .menu{
+            grid-column: 1;
+            grid-row: 2;
+            padding: 0 10px 0 5px;
+            background-color: rgb(248, 188, 76);
+        }
+        .information{
+            grid-column: 2;
+            grid-row: 2;
+            padding: 5px 20px 10px 20px;
+            background: url(ball.png) right top repeat-y;
+        }
+        a{
+            text-decoration: underline;  
+            color: blue;
+        }
+        p{
+            color: blue;
+            text-align: justify;
+        }
+        h2{
+            text-align: center; 
+            text-transform: uppercase;
+        }
+        img{
+            float: left;
+            width: 250px;
+            margin: 0 20px 0 0;    
+        }
+        @media (max-width:700px) {
+            .bottom, .header{
+                display: none;
+            }
+            .grid{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 2fr 1fr;    
+            }
+            .information{
+                grid-column: 1;
+                grid-row: 1;
+                background: none;   
+                margin: 0; 
+            }
+            .menu{
+                grid-column: 1;
+                grid-row: 2;
+                background: none;
+                padding: 0;
+                margin: 0;
+            }
+            img{
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            h3{
+                padding: 0 0 0 20px;
+                margin: 0;
+            }
+            ul{
+                margin: 0 0 0 -20px;
+            }
+            li{
+                display: inline;
+                list-style: none;
+                justify-content: left;
+                margin-right: 10px;
+            }
+
+    }
+        
+    
+</style>
+</head>
+<body>
+ <div class="grid">
+<div class="header">
+привет участникам соревнований!
+</div>         
+<div class="menu">
+<h3>Виды спорта:</h3>
+<ul>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%8C%D0%BA%D0%BE%D0%B1%D0%B5%D0%B6%D0%BD%D1%8B%D0%B9_%D1%81%D0%BF%D0%BE%D1%80%D1%82">конькобежный спорт</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D0%B0%D1%82%D0%BB%D0%BE%D0%BD">биатлон</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB">футбол</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%B8%D0%B7_%D0%BB%D1%83%D0%BA%D0%B0_(%D0%B2%D0%B8%D0%B4_%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0)">стрельба из лука</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8B%D0%B6%D0%BE%D0%BA_%D0%B2_%D0%B4%D0%BB%D0%B8%D0%BD%D1%83">прыжки в длину</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8B%D0%B6%D0%BE%D0%BA_%D0%B2_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%83">прыжки в высоту</a> </li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%B3%D1%83%D1%80%D0%BD%D0%BE%D0%B5_%D0%BA%D0%B0%D1%82%D0%B0%D0%BD%D0%B8%D0%B5">фигурное катание</a> </li>
+</ul>
+</div>
+<div class="information">
+<h2 >футбол</h2>
+<img src="cup.png" >
+<p>Футбол&mdash;командный вид спорта, в котором целью является забить мяч в ворота соперника ногами или другими частями тела (кроме рук) большее количество раз, чем команда соперника.<br><br>
+Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих принципов.</p>
+</div>
+
+<div class="bottom">главное не победа, а участие!</div>
+</div>  
+</body>
+</html>
